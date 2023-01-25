@@ -1,10 +1,11 @@
+```
 # Sync methods
 emaint -a sync				// Sync all repositories that are set to auto-sync including the Gentoo ebuild repository
 emerge-webrsync				// Sync the Gentoo ebuild repository using the mirrors by obtaining a snapshot that is (at most) a day old
-eix-sync					// emerge --sync now runs the emaint sync module with the --auto option
+eix-sync				// emerge --sync now runs the emaint sync module with the --auto option
 qlist -IRv				// List installed packages with version number and name of overlay used
 eix --world | less			// To view the list of packages in the world set, along with their available versions, it is possible to use
-eix --color -c --world | less -R		// To keep color in the output, use the --color switch
+eix --color -c --world | less -R	// To keep color in the output, use the --color switch
 
 # Package installation (man emerge)
 emerge -pv www-client/firefox		// List what packages would be installed, without installing them
@@ -73,3 +74,4 @@ systemctl status sshd			// Check if the sshd service is running
 emerge -s "%^python$			// To search packages in Portage by regular expressions
 emerge --regen				// Generate local metadata cache after syncing overlays
 qcheck vim-core				// Use qcheck to verify installed packages (app-portage/portage-utils)
+```
