@@ -18,6 +18,8 @@ emerge -W www-client/firefox		// Remove atoms and/or sets from the world file (-
 emerge -pc				// ^Review to make sure no required packages would be removed
 emerge -ac				// ^Once it has been assured that emerge -c will only remove unneeded packages, remove packages
 emerge -avc www-client/firefox		// To directly remove a package that no other packages depend on. (--depclean, -c) wont remove packages unless everything has been resolved. Sometimes it's necessary to update first (as below).
+
+# Package upgrade
 emerge -avuND @world			// Upgrade all packages in the world and their dependencies (--deep, -D)
 emerge -avuUD @world			// ^Use (--changed-use, -U) in place of (--newuse, -N) to avoid rebuilds
 emerge -aquUD @world			// ^Use the (--quiet, -q) flag for more succinct execution
