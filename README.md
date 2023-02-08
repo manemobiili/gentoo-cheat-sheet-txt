@@ -16,7 +16,7 @@ emerge -a1 www-client/firefox		// Install a package without adding it to the wor
 # Package removal
 emerge -W www-client/firefox		// Remove atoms and/or sets from the world file (--deselect [ y | n ], -W)
 emerge -pc				// Review to make sure no required packages would be removed
-emerge -n www-client/firefox        	// ^Don't remove these dependensies (--noreplace)
+emerge -n www-client/firefox        	// ^Don't remove these dependensies (--noreplace) by adding them into world file
 emerge -ac				// ^Once it has been assured that emerge -c will only remove unneeded packages, remove packages
 emerge -avc www-client/firefox		// To directly remove a package that no other packages depend on. (--depclean, -c) wont remove packages unless everything has been resolved. Sometimes it's necessary to update first (as below)
 
